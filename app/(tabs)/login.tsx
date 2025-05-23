@@ -10,13 +10,12 @@ export default function LoginScreen() {
     <SafeAreaView className="flex-1 bg-white px-6 justify-center">
       <View className="items-center mb-12">
         <Image
-          source={require('../assets/login-illustration.png')}
           className="w-64 h-64"
           resizeMode="contain"
         />
       </View>
 
-      <Text className="text-2xl font-bold mb-6 text-center text-gray-800">Welcome Back</Text>
+      <Text className="text-2xl font-bold mb-6 text-center text-red-400">Welcome Back</Text>
 
       <TextInput
         className="bg-gray-100 rounded-xl px-4 py-3 mb-4"
