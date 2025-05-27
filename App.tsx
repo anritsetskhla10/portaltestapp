@@ -7,6 +7,7 @@ export default function App() {
   return (
     <>
       <ScreenContent title="Home" path="App.tsx"></ScreenContent>
+      <ScreenContent title="Auth" path="pages/Auth.tsx"></ScreenContent>
       <StatusBar style="auto" />
     </>
   );
