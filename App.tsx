@@ -1,14 +1,21 @@
-import { ScreenContent } from 'components/ScreenContent';
-import { StatusBar } from 'expo-status-bar';
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// import AuthScreen from './pages/Auth';
+// import RegistrationScreen from './pages/Registration';
+// import { StatusBar } from 'expo-status-bar';
 
-import './global.css';
+// import './global.css'; 
 
-export default function App() {
-  return (
-    <>
-      <ScreenContent title="Home" path="App.tsx"></ScreenContent>
-      <ScreenContent title="Auth" path="pages/Auth.tsx"></ScreenContent>
-      <StatusBar style="auto" />
-    </>
-  );
-}
+// const Stack = createNativeStackNavigator();
+
+// export default function App() {
+//   return (
+//     <NavigationContainer>
+//       <StatusBar style="auto" />
+//       <Stack.Navigator initialRouteName="Registration" screenOptions={{ headerShown: false }}>
+//         <Stack.Screen name="Auth" component={AuthScreen} />
+//         <Stack.Screen name="Registration" component={RegistrationScreen} />
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// }

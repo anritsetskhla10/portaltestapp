@@ -1,36 +1,37 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Pressable, Image } from 'react-native';
+import { View, Text, TextInput, Pressable } from 'react-native';
 import { Eye, EyeOff } from 'lucide-react-native';
+
 
 export default function Auth() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [secure, setSecure] = useState(true);
-  const [rememberMe, setRememberMe] = useState(false);
 
   return (
     <View className="flex-1 bg-white">
       {/* Header */}
-      <View className="bg-yellow-400 flex-row justify-between items-center px-4 py-3">
-        <Text className="text-black font-bold text-2xl">Delivo</Text>
-        <Image source={require('../assets/flag.png')} className="w-6 h-6" />
+      <View className="flex-row items-center justify-between bg-yellow-400 px-4 py-3">
+        <Text className="text-2xl font-bold text-black">Delivo</Text>
       </View>
 
       {/* Card */}
       <View className="flex-1 justify-center px-6">
-        <View className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+        <View className="rounded-xl border border-gray-100 bg-white p-6 shadow-md">
           {/* Tabs */}
-          <View className="flex-row justify-around mb-4">
-            <Text className="text-yellow-500 border-b-2 border-yellow-500 pb-1 font-semibold">LOGIN</Text>
+          <View className="mb-4 flex-row justify-around">
+            <Text className="border-b-2 border-yellow-500 pb-1 font-semibold text-yellow-500">
+              LOGIN
+            </Text>
             <Text className="text-gray-500">REGISTRATION</Text>
           </View>
 
-          <Text className="text-center text-2xl font-bold mb-6">Log In</Text>
+          <Text className="mb-6 text-center text-2xl font-bold">Log In</Text>
 
           {/* Email Input */}
           <Text className="text-sm text-gray-500">E-mail</Text>
           <TextInput
-            className="border rounded-md px-4 py-2 mt-1 mb-4 bg-blue-50"
+            className="mb-4 mt-1 rounded-md border bg-blue-50 px-4 py-2"
             value={email}
             onChangeText={setEmail}
             placeholder="Enter email"
@@ -39,7 +40,7 @@ export default function Auth() {
 
           {/* Password Input */}
           <Text className="text-sm text-gray-500">Password</Text>
-          <View className="flex-row items-center border rounded-md bg-blue-50 px-4 py-2 mb-4">
+          <View className="mb-4 flex-row items-center rounded-md border bg-blue-50 px-4 py-2">
             <TextInput
               className="flex-1"
               value={password}
@@ -48,14 +49,17 @@ export default function Auth() {
               placeholder="Enter password"
             />
             <Pressable onPress={() => setSecure(!secure)}>
-              {secure ? <Eye className="text-gray-500" size={20} /> : <EyeOff className="text-gray-500" size={20} />}
+              {secure ? (
+                <Eye className="text-gray-500" size={20} />
+              ) : (
+                <EyeOff className="text-gray-500" size={20} />
+              )}
             </Pressable>
           </View>
 
-
           {/* Login Button */}
-          <Pressable className="bg-yellow-400 py-3 rounded-md items-center mb-4">
-            <Text className="text-black font-bold">LOGIN</Text>
+          <Pressable className="mb-4 items-center rounded-md bg-yellow-400 py-3">
+            <Text className="font-bold text-black">LOGIN</Text>
           </Pressable>
 
           {/* Reset Password */}
@@ -64,7 +68,7 @@ export default function Auth() {
       </View>
 
       {/* Footer */}
-      <View className="bg-yellow-400 px-4 py-3 flex-wrap flex-row justify-between">
+      <View className="flex-row flex-wrap justify-between bg-yellow-400 px-4 py-3">
         <Text className="text-xs text-black">My orders</Text>
         <Text className="text-xs text-black">For developers</Text>
         <Text className="text-xs text-black">Delivo's web-site</Text>
@@ -75,4 +79,3 @@ export default function Auth() {
     </View>
   );
 }
-
