@@ -1,11 +1,18 @@
-import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
-import '../global.css'; // Ensure global styles are imported
+import '../global.css';
 
-SplashScreen.preventAutoHideAsync();
-
-export default function RootLayout() {
-  return <Stack />;
+export default function Layout() {
+  return (
+    <Stack
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <Stack.Screen name="index" options={{}} />
+      <Stack.Screen name="home" options={{}} />
+      <Stack.Screen name="auth" options={{}} />
+      <Stack.Screen name="registration" options={{}} />
+      <Stack.Screen name="+not-found" options={{}} />
+    </Stack>
+  );
 }
